@@ -2,39 +2,40 @@
 OS：Linux
 Compiler: g++(GCC)
 
-2.	The file of source code description:
-ass.h: define Ass, Generator and Operator’s class and initial value
-ass.cpp: declare a member function definition.
-ass2_proj.cpp : include main() function.
+2.	The description of source files:
+ass.h: define ass, generator and operator’s class and initial value
+ass.cpp: declare definition of member function. 
+ass2_proj.cpp: main function.
 
 3.	Compiling:
-Execute the following command
-	make clean
-	make
+Execute following commands:
+		make clean
+		make
 
 4.	Running:
-Use “make” command first then use ./Ass2 or ./Ass2 x (x is an integer, the range is from 1 to 10, x is used to adjust the number of operators)
+Input “make” command at command window, then input /Ass2 or /Ass2 x at the same window.
+(x is an integer, the range is from 1 to 10, x is used to adjust the number of operators)
 
 Function declaration:
 
-1.	Pause or resume program: After running program, you can type “p” then press “Enter” immediately for pause the program. The same is you can type “r” then press “Enter” immediately for resume the program.
+1.	Pause or resume program: After the program run, you can input “p” for pause the program or input “r” for resume the program.
 
-2.	Operators adjustable
+2.	Adjust the number of operators
 
-3.	Tools adjustable (I used the new restrictions that you have provided from E-mail)
+3.	Adjust the number of tools (I used the new restrictions that you have provided from E-mail)
 
 4.	Display the number of materials, material’s buffer, the number of products, and the buffer of product information.
 
 Design ideas:
 
 1.	How to ensure the diversity of the material in a buffer?
-Base on the size of material’s buffer, and the type of materials, I set a value to limit each number of the material. Such as the size of the buffer is 10, I have 3 type of materials. I have to ensure the buffer of material includes all type of materials. Thus, I set 4 as a limit value for each material.
+I limited each number of the material, and have 3 types of materials to ensure the buffer of material includes all type of materials. Thus, I set 4 as a limit value for each material.
 
-2.	How can I prevent another does not occupy the tools?
-The operator can only get two tools or nothing at each time; this way can avoid deadlock.
+2.	How can I prevent tools do not occupied by others?
+The operator can only get two tools or nothing at each time.
 	
-3.	No same products can be next to each other in this queue
+3.	How to ensure that the two adjacent products in the product cache are different?
 Before the program decides to produce a product, the program can exclude the type of the last product in the current product buffer and the types of products that are currently in production.
 	
-4.	 The difference of the number of any two kinds of products produced should be less than 10.
+4.	How to prevent product cache is not exceeding 10 in difference between the number of any two products?
 When deciding on the type of product to be produced, after satisfying the case of satisfaction (3), the program will select the least number of products with no more than ten products.
