@@ -18,7 +18,7 @@ Input “make” command at command window, then input /Ass2 or /Ass2 x at the s
 
 Function declaration:
 
-1.	Pause or resume program: After the program run, you can input “p” for pause the program or input “r” for resume the program.
+1.	Pause or resume program: After the program run, input “p” for pause the program or input “r” for resuming the program.
 
 2.	Adjust the number of operators
 
@@ -29,13 +29,13 @@ Function declaration:
 Design ideas:
 
 1.	How to ensure the diversity of the material in a buffer?
-I limited each number of the material, and have 3 types of materials to ensure the buffer of material includes all type of materials. Thus, I set 4 as a limit value for each material.
+The program limited each number of the material, and have 3 types of materials to ensure the buffer of material includes all type of materials. Thus, the program set 4 as a limit value for each material.
 
-2.	How can I prevent tools do not occupied by others?
+2.	How can prevent the tools do not occupied by others?
 The operator can only get two tools or nothing at each time.
 	
-3.	How to ensure that the two adjacent products in the product cache are different?
-Before the program decides to produce a product, the program can exclude the type of the last product in the current product buffer and the types of products that are currently in production.
+3.	How to ensure the different between two adjacent products in the product cache?
+Before the program decides to produce a product, the program can exclude the type of the last product in the current product buffer and the types of products are currently in production.
 	
 4.	How to prevent product cache is not exceeding 10 in difference between the number of any two products?
-When deciding on the type of product to be produced, after satisfying the case of satisfaction (3), the program will select the least number of products with no more than ten products.
+When deciding on the type of product to be produced, after satisfying the case of satisfaction (3), the program will select no more than ten products.
